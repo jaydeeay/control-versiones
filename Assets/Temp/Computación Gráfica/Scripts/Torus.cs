@@ -22,8 +22,11 @@ public class Torus : MonoBehaviour
     private void Update()
     {
         _angle += speed * Time.deltaTime * Mathf.Deg2Rad;
+        float x = (radius1 + (radius2 * Mathf.Cos(insideLaps * _angle))) * Mathf.Cos(_angle);
+        float y = (radius1 + (radius2 * Mathf.Cos(insideLaps * _angle))) * Mathf.Sin(_angle);
+        float z = radius2 * Mathf.Sin(insideLaps * _angle);
 
-        _localPosition.Set((radius1 + (radius2 * Mathf.Cos(insideLaps * _angle))) * Mathf.Cos(_angle), (radius1 + (radius2 * Mathf.Cos(insideLaps * _angle))) * Mathf.Sin(_angle), radius2 * Mathf.Sin(insideLaps * _angle));
+        _localPosition.Set(x,y,z);
         
         _object.localPosition = _localPosition;
         

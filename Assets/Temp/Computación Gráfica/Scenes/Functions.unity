@@ -276,9 +276,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45e6cfbf1131474a933b59cc0b2d475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object2: {fileID: 1580904344}
   speed: 4
-  xAmplitude: 2
+  separation: 0
+--- !u!1 &210129910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210129911}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &210129911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210129910}
+  m_LocalRotation: {x: 0, y: 0, z: 0.026176924, w: 0.99965733}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1580904344}
+  m_Father: {fileID: 999605236}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3}
 --- !u!1 &337824773
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1580904344}
+  - {fileID: 210129911}
   - {fileID: 125712319}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -858,6 +889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580904344}
   - component: {fileID: 1580904346}
+  - component: {fileID: 1580904347}
   m_Layer: 0
   m_Name: Helice
   m_TagString: Untagged
@@ -872,12 +904,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580904343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -26.362408, y: 19.476025, z: -0.01846385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 999605236}
+  m_Father: {fileID: 210129911}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1580904346
@@ -988,6 +1020,20 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1580904347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580904343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45e6cfbf1131474a933b59cc0b2d475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  separation: 0
 --- !u!1 &1768305484
 GameObject:
   m_ObjectHideFlags: 0
